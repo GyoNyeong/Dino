@@ -10,7 +10,7 @@ AObstacle::AObstacle()
 	PrimaryActorTick.bCanEverTick = true;
 
 	DefaultScenComponent = CreateDefaultSubobject<USceneComponent>(TEXT("DefaultScenComponent"));
-	DefaultScenComponent = RootComponent;
+	RootComponent = DefaultScenComponent;
 
 	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
 	StaticMeshComponent->SetupAttachment(DefaultScenComponent);
